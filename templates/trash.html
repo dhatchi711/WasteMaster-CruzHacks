@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset='UTF-8'>
+	<title>Trash</title>
+	<link rel="stylesheet" href="styles.css">
+	<style> 
+		body {
+		  background-color: gray;
+		  animation-name: example;
+		  animation-duration: 3s;
+		  color: white;
+		}
+
+		@keyframes example {
+		  from {background-color: white;}
+		  to {background-color: gray;}
+		}
+
+		.bigtext{
+			font-family: sans-serif;
+			font: verdana;
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			bottom: 50%;     
+			width: 100%;
+			display:flex;
+			justify-content: center;
+		}
+        div {text-align: center;}
+
+		.nav-link-wrapper a{
+			color : white;
+		}
+	</style>
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">WASTE MASTER</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('about') }}">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <br><br>
+    <br>
+    <br>
+	<div>
+    <h1>This item belongs in the trash bin.</h1>
+</div>
+    <div text-center>
+    <h3>According to the Waste Management Company, 25% of disposable trash is wrongly placed into recycling and compost bins.</h3>
+    <h3>Lets work together to reduce our waste with Waste Master!</h3>
+</div>
+    <br>
+    <br>
+<div class="text-center">
+<form action="/">
+  <input type="submit" value="Classify More Waste">
+</form></div>
+</body>
+</html>

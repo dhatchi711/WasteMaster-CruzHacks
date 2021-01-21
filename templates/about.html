@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Waste Master</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body{
+  font-family: "Lato";
+  margin: 0px;
+  min-height: 100vh;
+  background-color: #20bf55;
+  background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* Front Page */
+#upload {
+    opacity: 0;
+}
+
+#upload-label {
+    position: absolute;
+    top: 10%;
+    left: 1rem;
+    transform: translateY(40%);
+}
+
+.image-area {
+    border: 2px dashed rgba(255, 255, 255, 0.7);
+    padding: 1rem;
+    position: relative;
+}
+
+.image-area::before {
+    content: 'Uploaded image result';
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+.image-area img {
+    z-index: 2;
+    position: relative;
+}
+
+/* Nav Styles */
+
+.nav-wrapper {
+  display:flex;
+  justify-content: space-between;
+  padding: 38px;
+}
+
+.left-side{
+  display: flex;
+}
+
+.nav-wrapper > .left-side > div {
+  margin-right: 20px;
+  font-size: larger;
+  text-transform: uppercase;
+}
+
+.nav-wrapper > .right-side > div {
+  margin-right: 20px;
+  font-size: larger;
+  text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+  height: 22px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a{
+  color: white;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+  border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover {
+  color: black;
+}
+
+.active-nav-link {
+  border-bottom: 1px solid black;
+}
+
+.active-nav-link a{
+  color: black !important;
+}
+
+/*Portfolio Styles */
+.portfolio-items-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper{
+  position: relative;
+}
+
+.portfolio-img-background{
+  height: 350px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-text-wrapper{
+  position: absolute; /*position relative is required in order to force the element to a place where it wouldn't normally go*/
+  top: 0; /*appear at the very top*/
+  display: flex; /*all the items appear in flex*/
+  flex-direction: column;
+  justify-content: center; /*center left to right*/
+  align-items: center; /*center top to bottom*/
+  height: 100%;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.logo-wrapper img{
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.img-text-wrapper .subtitle {
+  transition: 1s;
+  font-weight: 600;
+  color: transparent;
+}
+
+.img-text-wrapper:hover .subtitle {
+  font-weight: 600;
+  color: lightseagreen;
+}
+
+.img-darken{
+  transition: 1s;
+  filter: brightness(10%);
+}
+
+/*About Page styles*/
+.two-column-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.logo-image-wrapper img{
+  width: 80%;
+}
+
+.about-content-wrapper {
+  padding: 38px;
+}
+
+.about-content-wrapper h1{
+  color: white;
+}
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">WASTE MASTER</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('about') }}">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+        <div class="content-wrapper">
+            <div class="two-column-wrapper">
+              <div class="logo-image-wrapper">
+    <img src="{{url_for('static', filename='Logo_Final.png')}} " width="150" class="mb-4">
+
+              </div>
+
+              <div class="about-content-wrapper">
+                <h1>Welcome to WasteMaster</h1>
+
+                <p>This application created by four college sophomores, Ameya Mandale, Dhatchinamoorthi Kunde Govindarajan, Hari Siddhi Natraj Sankaranarayanan and Sri Siddhartha Madduri provides a solution to improper waste management amongst individuals. The application was created within a day at CruzHacks, during the pandemic of 2021. </p>
+
+                <p>The way to use the application is as simple as it sounds. Just simply upload a JPEG or PNG file of an item that you don't know where to dispose, and the WasteMaster will guide you to the right bin. It answers all your problems in improper waste management and helps you become more environmentally conscious!</p>
+
+                <p>Aspiring for a better future!</p>
+              </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

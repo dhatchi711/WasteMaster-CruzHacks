@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "wastemaster",
+  "private_key_id": "879dc376a7b90c8c8450a6aabd6234754ef76a8c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCwQ5z8mDWMjoVv\n6CPXaK2fv0jxpZgqnPDQD63wkKkHWpjdRFYRjiedJVWruuAupZN8zfAsStWGyYFN\nBNeLU67cuSQmwepE5om/NL7Z6rI0rQepwBePn9F8fCEWJS8cGpTZ0XEllBNYuvP3\nYunZGOOD0F/rqD+cnwrLMLjLPkq9AmdCQDJoFp1/dHvTun+bWi9TxeGb453TJcY3\nfTiSE5U8en7mTEcwcCeOuGWg28zAxoPwiEggNvo0OcyokyfOAMO73/yip3FwTXI7\neThfWzBOmmsCeOp2p276acRDW2UTDamU3v009CHFTx/RwgRFJOK4LJ8U3FKgs65U\nQAc+NC8FAgMBAAECggEAJurm0Iay3BPjtm+k6jy8iRbs/h232UDJksbDeugVyf/g\n3InoDvw6FuJVZhNeyC3awKWfr8feGWKIX/7/sE2LwERIjR4noYrdQxBcSzUcn7DM\njlhRW27IDBpEG+Wd3zCnSOiLeOaW1vKAR1DZnQt3wHTTmO6PDP+4nGBnjMh2LADr\nn1cVTg2Lb/rclh03iRGtw2GBZkaI5y+s2aMlU/fCiLaH/ePJeSoUuuucvGGKxaao\nKIVS7oJHYrMeq8ggeH6FcUXoX4l/t54gtqf6x5ZuH1Zvay+6hdipo0kgK1Dghky7\nMxn9jAXCG9inRPjiwn52WshrYWgMRaUuPrIxLnUDQQKBgQDpZNGp2z/GomabtvSS\nI+f5HhMFXyuft4eKluL5/0RdDkPO3FbAMzrim/vy1A3BlxdIL+O1g3Po9StkdZg+\nH/O3GKtdTKpBF/Dv29/hbtwoD2sPWLNyQwQarNEVsJqA+1dYUGyG5MtCzFq06cvw\nx2wck61smvI6xubCTX7636DU3QKBgQDBVjf+9XQOtQe1bC1lMxBKbi8K8oVEYnIb\n5oU+sf+dgrngnPI/dkxpe0+CMSXPTuH6D09FzDCd4O1VpGfas5/ALWPLgR+zdPQ6\nY7DzTphWKl6d+ogenjpI4AkR2ghnamGeOsQvyyE5zx4vkxLG5Y0GYIdwS1waywUT\n3tVucO+sSQKBgGMI7dKWfzRpOwL+Gj9czxUtRsLzxE4MkY4kQoH0aGzYHbvMUV9T\nHbyEld9PTdsEotN1xrkB45BJYDVLlONfqYnbBPQdEO14HDubYB+HbBHvoO0tJU/p\n0fcDt+DtRFJQ1Jpb3gFLWlio4CB+SJSN+nkRzPgVs41vUwHF4ojPla5dAoGAJ6eJ\ngK/TiBi1Zg60GOeqVbnXyEUJ9IbEpNhZSAy2QxZHDbzjKwUWkyQJoMh32tdxHhr5\nxXUmG5vA0ioQaxkgkQg+ScVIPUSluzwrVRwvvqyeD4UNWkpV5hCdi53Oz3dQYmXn\nS248eGD07gkadtUqYb52yR+L2qr9dZ/k4uwjHJECgYEAqQbE3XbuipXRIzZeVOIS\nBKLaCFbF+2nqpDEvAZG+OF1ckiGBVEhj67udhy7Gox3EEWPyB/aBmRnD71AHyins\nBoQkTWY+2uD57gr98XN/6UmSmLXoOeVr3jbQz2j40lmeeClMHHcuXqUn57gs4CwP\nQ9KTsZ7hUIbAH4E4UJt3uXk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "wastemaster@wastemaster.iam.gserviceaccount.com",
+  "client_id": "110511760097152341671",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/wastemaster%40wastemaster.iam.gserviceaccount.com"
+}

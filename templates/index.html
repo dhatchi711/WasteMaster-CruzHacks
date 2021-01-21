@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Home</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+
+            <div class="right-side">
+              <div class="brand">
+                WASTEMASTER
+              </div>
+            </div>
+        </div>
+        <div class="container py-5">
+
+    <!-- For demo purpose -->
+<header class="text-white text-center">
+    <h1 class="display-4">WasteMaster Will Classify Your Waste</h1>
+    <p class="lead mb-0">Make sure image is clear and shows the subject</p>
+    <image src="{{ url_for('static', filename='images/style.css')}}">
+
+    <img src="https://res.cloudinary.com/mhmd/image/upload/v1564991372/image_pxlho1.svg" alt="" width="150" class="mb-4">
+</header>
+
+    <div class="row py-4">
+        <div class="col-lg-6 mx-auto">
+
+            <!-- Upload image input-->
+            <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+                <input id="upload" type="file" onchange="readURL(this);" class="form-control border-0">
+                <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose a PNG/JPEG file</label>
+                <div class="input-group-append">
+                    <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
+                </div>
+            </div>
+
+            <!-- Uploaded image area-->
+            <p class="font-italic text-white text-center">The image uploaded will be rendered inside the box below.</p>
+            <div class="image-area mt-4"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+
+        </div>
+    </div>
+</div>
+        <div class="portfolio-items-wrapper">
+
+        <div class="portfolio-item-wrapper">
+            <div class="portfolio-img-background" style="background-image:url(images/trash.jpg)"></div>
+
+            <div class="img-text-wrapper">
+
+              <div class="logo-wrapper">
+                <img src="images/logos/trash_logo.png" alt="">
+              </div>
+
+              <div class="subtitle">
+                Garbage
+              </div>
+
+            </div>
+
+        </div>
+
+        <div class="portfolio-item-wrapper">
+            <div class="portfolio-img-background" style="background-image:url(images/recycables.jpg)"></div>
+
+            <div class="img-text-wrapper">
+
+              <div class="logo-wrapper">
+                <img src="images/logos/recycables_logo.png" alt="">
+
+              </div>
+
+              <div class="subtitle">
+                Recyclables
+              </div>
+
+            </div>
+
+        </div>
+
+        <div class="portfolio-item-wrapper">
+            <div class="portfolio-img-background" style="background-image:url(images/compost.jpg)"></div>
+
+            <div class="img-text-wrapper">
+
+              <div class="logo-wrapper">
+                <img src="images/logos/compost_logo.png" alt="">
+
+              </div>
+
+              <div class="subtitle">
+                Compost
+              </div>
+
+            </div>
+
+        </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+<script>
+  const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+  portfolioItems.forEach(portfolioItem =>{
+    portfolioItem.addEventListener('mouseover',() => {
+      portfolioItem.childNodes[1].classList.add('img-darken');
+    })
+
+    portfolioItem.addEventListener('mouseout',() => {
+      portfolioItem.childNodes[1].classList.remove('img-darken');
+
+    })
+  })
+  function readURL(input) {
+      if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+              $('#imageResult')
+                  .attr('src', e.target.result);
+          };
+          reader.readAsDataURL(input.files[0]);
+      }
+  }
+
+  $(function () {
+      $('#upload').on('change', function () {
+          readURL(input);
+      });
+  });
+
+  var input = document.getElementById( 'upload' );
+  var infoArea = document.getElementById( 'upload-label' );
+
+  input.addEventListener( 'change', showFileName );
+  function showFileName( event ) {
+    var input = event.srcElement;
+    var fileName = input.files[0].name;
+    infoArea.textContent = 'File name: ' + fileName;
+  }
+</script>
+</html>
